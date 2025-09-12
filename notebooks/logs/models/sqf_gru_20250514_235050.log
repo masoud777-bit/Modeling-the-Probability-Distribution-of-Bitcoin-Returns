@@ -1,0 +1,206 @@
+2025-05-14 23:50:50,422	INFO worker.py:1843 -- Started a local Ray instance. View the dashboard at http://127.0.0.1:8267 
+2025-05-14 23:51:11,683 - INFO - Starting main script.
+2025-05-14 23:51:11,810 - INFO - SplineQuantileRegressionModel initialized
+2025-05-14 23:51:11,810 - INFO - Temporary SplineQuantileRegressionModel instance created for data loading.
+2025-05-14 23:51:34,590 - INFO - Data loaded: X shape (3152, 114), y shape (3152,)
+2025-05-14 23:51:34,590 - INFO - Scaled training data loaded: y shape (3152,)
+2025-05-14 23:51:34,590 - INFO - Calculated naive train error (scaled) for MASE: 0.16827769577503204
+2025-05-14 23:51:34,606 - INFO - Ray already initialized.
+2025-05-14 23:51:34,665 - INFO - Ray Tune results will be stored in: C:\Users\masoud\ray_results_sqp_mgru
+2025-05-14 23:51:34,665 - INFO - Ray Tune experiment name: sqp_gru_tuning_campaign_v1
+2025-05-14 23:51:35,121	INFO tune.py:616 -- [output] This uses the legacy output and progress reporter, as Jupyter notebooks are not supported by the new engine, yet. For more information, please see https://github.com/ray-project/ray/issues/36949
+Tune Status
+Current time:	2025-05-15 03:33:42
+Running for:	03:42:06.16
+Memory:	12.7/27.9 GiB
+System Info
+Using AsyncHyperBand: num_stopped=0
+Bracket: Iter 80.000: None | Iter 20.000: None | Iter 5.000: None
+Logical resource usage: 1.0/4 CPUs, 0/0 GPUs
+Trial Status
+Trial name	status	loc	batch_size	dropout_rate	epochs	es_patience	gru_units	l2_reg	learning_rate	num_gru_layers	num_knots	num_samples	rlr_cooldown	rlr_factor	rlr_min_lr	rlr_patience	seed	time_steps	iter	total time (s)	combined_objective	r2	crps
+tune_model_5b197d62	TERMINATED	127.0.0.1:3528	128	0.40171	100	10	128	3.65616e-06	0.000688019	3	158	6833	0	0.2	1e-07	10	42	6	1	3688.1	0.622202	0.803294	0.268253
+tune_model_709b98fc	TERMINATED	127.0.0.1:16380	128	0.331289	100	10	128	1.33601e-05	0.00100853	2	245	5979	0	0.2	1e-07	10	42	6	1	5252.36	0.577958	0.764109	0.286985
+tune_model_aa6efe7a	TERMINATED	127.0.0.1:5476	64	0.0689203	100	10	256	8.95775e-06	0.000461406	1	194	7752	0	0.2	1e-07	10	42	6	1	2061.37	0.452601	0.845523	0.248021
+tune_model_93d1f24c	TERMINATED	127.0.0.1:16036	64	0.446454	100	10	64	2.8693e-06	0.000497968	2	82	5602	0	0.2	1e-07	10	42	6	1	2844.22	0.670288	0.57075	0.411723
+tune_model_cfbe9914	TERMINATED	127.0.0.1:12096	32	0.498543	100	10	64	0.00686161	0.00371197	1	191	4828	0	0.2	1e-07	10	42	6	1	1322.9	0.284256	0.852245	0.253342
+tune_model_8c987df0	TERMINATED	127.0.0.1:10252	32	0.387117	100	10	256	5.65839e-05	0.0090801	1	187	4343	0	0.2	1e-07	10	42	6	1	3869.59	0.574689	0.780548	0.280663
+tune_model_78447d38	TERMINATED	127.0.0.1:15540	128	0.316706	100	10	64	0.00022074	0.000571688	1	120	6565	0	0.2	1e-07	10	42	6	1	612.409	0.516453	0.715245	0.330663
+tune_model_c54a48d2	TERMINATED	127.0.0.1:23716	128	0.206439	100	10	64	0.000156598	0.00237549	2	159	6461	0	0.2	1e-07	10	42	6	1	859.456	0.378399	0.723758	0.34562
+tune_model_5c3b5110	TERMINATED	127.0.0.1:7744	64	0.266582	100	10	64	6.10403e-05	0.000923313	2	284	8891	0	0.2	1e-07	10	42	6	1	736.507	0.368335	0.724188	0.350592
+tune_model_9c66b2fc	TERMINATED	127.0.0.1:19860	32	0.349905	100	10	64	4.36919e-05	0.000184453	2	147	4567	0	0.2	1e-07	10	42	6	1	3600.26	0.716895	0.39659	0.509931
+tune_model_890a9216	TERMINATED	127.0.0.1:16016	32	0.169516	100	10	128	0.00310666	0.000811695	3	133	6914	0	0.2	1e-07	10	42	6	1	1225.13	0.51791	0.626083	0.389809
+tune_model_11976fbf	TERMINATED	127.0.0.1:23108	64	0.049239	100	10	128	0.00275745	0.00138454	2	287	6939	0	0.2	1e-07	10	42	6	1	2112.57	0.501109	0.836081	0.242804
+tune_model_fc4f6a10	TERMINATED	127.0.0.1:27364	64	0.468137	100	10	128	0.00779016	0.000603347	2	203	9002	0	0.2	1e-07	10	42	6	1	1712.87	0.554013	0.785623	0.273458
+tune_model_27fa5df8	TERMINATED	127.0.0.1:26908	64	0.48914	100	10	128	0.000736854	0.00210403	3	295	5503	0	0.2	1e-07	10	42	6	1	464.926	0.665541	0.719379	0.306529
+tune_model_be41f8ca	TERMINATED	127.0.0.1:25616	128	0.307045	100	10	128	0.00132824	0.00153731	2	192	5730	0	0.2	1e-07	10	42	6	1	2495.23	0.598425	0.786209	0.271404
+tune_model_7a08959f	TERMINATED	127.0.0.1:8700	32	0.280172	100	10	128	0.00076714	0.000213885	3	125	4766	0	0.2	1e-07	10	42	6	1	2261.08	0.55307	0.805433	0.267743
+tune_model_bd6462b5	TERMINATED	127.0.0.1:21820	32	0.305207	100	10	128	0.000211233	0.00098573	3	144	8075	0	0.2	1e-07	10	42	6	1	2115.73	0.389131	0.82136	0.253179
+tune_model_6f60e775	TERMINATED	127.0.0.1:25668	128	0.497207	100	10	64	0.000158386	0.000857905	1	219	6526	0	0.2	1e-07	10	42	6	1	1649.74	0.416478	0.731018	0.329168
+tune_model_4deab6c2	TERMINATED	127.0.0.1:6044	128	0.487326	100	10	256	4.87842e-06	0.00620271	2	135	7326	0	0.2	1e-07	10	42	6	1	1103.57	0.598032	0.699561	0.322784
+tune_model_c32fc13a	TERMINATED	127.0.0.1:27052	32	0.266762	100	10	256	0.00499984	0.00045231	1	283	6788	0	0.2	1e-07	10	42	6	1	345.053	0.460822	0.843688	0.246822
+2025-05-14 23:51:36,579	ERROR tune_controller.py:235 -- Failed to restore the run state.
+Traceback (most recent call last):
+  File "C:\Users\masoud\tf-env\Lib\site-packages\ray\tune\execution\tune_controller.py", line 230, in __init__
+    self.resume(resume_config=resume_config)
+  File "C:\Users\masoud\tf-env\Lib\site-packages\ray\tune\execution\tune_controller.py", line 437, in resume
+    raise ValueError(
+ValueError: Tried to resume experiment from directory 'C:/Users/masoud/ray_results_sqp_mgru/sqp_gru_tuning_campaign_v1', but no experiment state file of the form 'experiment_state-{}.json' was found. This is expected if you are launching a new experiment.
+2025-05-14 23:51:36,579	INFO tune_controller.py:238 -- Restarting experiment.
+2025-05-15 03:33:42,736	INFO tune.py:1009 -- Wrote the latest version of all result files and experiment state to 'C:/Users/masoud/ray_results_sqp_mgru/sqp_gru_tuning_campaign_v1' in 0.0685s.
+2025-05-15 03:33:42,778	INFO tune.py:1041 -- Total run time: 13327.66 seconds (13326.09 seconds for the tuning loop).
+2025-05-15 03:33:43,202 - INFO - Ray Tune search completed.
+2025-05-15 03:33:43,202 - INFO - Best trial selected: cfbe9914 from path C:/Users/masoud/ray_results_sqp_mgru/sqp_gru_tuning_campaign_v1/trial_cfbe9914
+2025-05-15 03:33:43,202 - INFO - Best trial config: {'seed': 42, 'num_gru_layers': 1, 'gru_units': 64, 'dropout_rate': 0.4985430071274542, 'learning_rate': 0.003711965463223145, 'batch_size': 32, 'epochs': 100, 'num_knots': 191, 'l2_reg': 0.006861610973761535, 'time_steps': 6, 'num_samples': 4828, 'es_patience': 10, 'rlr_factor': 0.2, 'rlr_patience': 10, 'rlr_min_lr': 1e-07, 'rlr_cooldown': 0}
+2025-05-15 03:33:43,202 - INFO - Best trial last result: {'combined_objective': np.float64(0.2842562292633543), 'r2': 0.8522445883649629, 'crps': np.float64(0.25334228152490584), 'kl_divergence': np.float64(0.0033445753671953442), 'msis': np.float64(0.4845040045282633), 'rmse': np.float64(0.3605427795931526), 'mae': np.float64(0.2823371671036592), 'mase': np.float64(1.6778050460181697), 'pit_mean': np.float64(0.6082501849000552), 'pit_std': np.float64(0.4503109292055093), 'train_loss': 0.1268431842327118, 'val_loss': 0.11728823184967041, 'num_samples_eval': 19312, 'num_samples_calibration_used': 200000, 'timestamp': 1747258938, 'checkpoint_dir_name': None, 'done': True, 'training_iteration': 1, 'trial_id': 'cfbe9914', 'date': '2025-05-15_01-12-18', 'time_this_iter_s': 1322.8988628387451, 'time_total_s': 1322.8988628387451, 'pid': 12096, 'hostname': 'DESKTOP-P4K5CEF', 'node_ip': '127.0.0.1', 'config': {'seed': 42, 'num_gru_layers': 1, 'gru_units': 64, 'dropout_rate': 0.4985430071274542, 'learning_rate': 0.003711965463223145, 'batch_size': 32, 'epochs': 100, 'num_knots': 191, 'l2_reg': 0.006861610973761535, 'time_steps': 6, 'num_samples': 4828, 'es_patience': 10, 'rlr_factor': 0.2, 'rlr_patience': 10, 'rlr_min_lr': 1e-07, 'rlr_cooldown': 0}, 'time_since_restore': 1322.8988628387451, 'iterations_since_restore': 1, 'experiment_tag': '5_batch_size=32,dropout_rate=0.4985,epochs=100,es_patience=10,gru_units=64,l2_reg=0.0069,learning_rate=0.0037,num_gru_layers=1,num_knots=191,num_samples=4828,rlr_cooldown=0,rlr_factor=0.2000,rlr_min_lr=0.0000,rlr_patience=10,seed=42,time_steps=6'}
+2025-05-15 03:33:43,202 - INFO - SplineQuantileRegressionModel initialized for final training with best config.
+2025-05-15 03:33:43,233 - INFO - SplineQuantileRegressionModel initialized
+2025-05-15 03:33:50,358 - INFO - Data loaded: X shape (3152, 114), y shape (3152,)
+2025-05-15 03:33:50,358 - INFO - Full training data loaded: X shape (3152, 114), y shape (3152,)
+2025-05-15 03:33:53,100 - INFO - Data loaded: X shape (1352, 114), y shape (1352,)
+2025-05-15 03:33:53,107 - INFO - Data split for final evaluation: Validation (676 samples), Final Test (676 samples).
+2025-05-15 03:33:53,107 - INFO - Starting final model training with best hyperparameters...
+2025-05-15 03:33:53,107 - INFO - Starting model training...
+2025-05-15 03:33:53,123 - INFO - X_reshaped shape: (3147, 6, 114), y_train shape: (3147,)
+2025-05-15 03:33:53,311 - INFO - Model built successfully.
+2025-05-15 03:33:53,311 - INFO - Checkpointing enabled: Saving best weights to C:/Users/masoud/ray_results_sqp_mgru/sqp_gru_tuning_campaign_v1/trial_cfbe9914\final_model_checkpoint\checkpoint.weights.h5
+2025-05-15 03:33:53,311 - INFO - Starting model.fit...
+Epoch 1/100
+97/99 ━━━━━━━━━━━━━━━━━━━━ 0s 8ms/step - loss: 0.5345
+Epoch 1: val_loss improved from inf to 0.12535, saving model to C:/Users/masoud/ray_results_sqp_mgru/sqp_gru_tuning_campaign_v1/trial_cfbe9914\final_model_checkpoint\checkpoint.weights.h5
+99/99 ━━━━━━━━━━━━━━━━━━━━ 6s 16ms/step - loss: 0.5272 - val_loss: 0.1253 - learning_rate: 0.0037
+Epoch 2/100
+98/99 ━━━━━━━━━━━━━━━━━━━━ 0s 9ms/step - loss: 0.1442
+Epoch 2: val_loss improved from 0.12535 to 0.12071, saving model to C:/Users/masoud/ray_results_sqp_mgru/sqp_gru_tuning_campaign_v1/trial_cfbe9914\final_model_checkpoint\checkpoint.weights.h5
+99/99 ━━━━━━━━━━━━━━━━━━━━ 1s 12ms/step - loss: 0.1442 - val_loss: 0.1207 - learning_rate: 0.0037
+Epoch 3/100
+94/99 ━━━━━━━━━━━━━━━━━━━━ 0s 8ms/step - loss: 0.1384
+Epoch 3: val_loss improved from 0.12071 to 0.11412, saving model to C:/Users/masoud/ray_results_sqp_mgru/sqp_gru_tuning_campaign_v1/trial_cfbe9914\final_model_checkpoint\checkpoint.weights.h5
+99/99 ━━━━━━━━━━━━━━━━━━━━ 1s 11ms/step - loss: 0.1385 - val_loss: 0.1141 - learning_rate: 0.0037
+Epoch 4/100
+97/99 ━━━━━━━━━━━━━━━━━━━━ 0s 9ms/step - loss: 0.1367
+Epoch 4: val_loss did not improve from 0.11412
+99/99 ━━━━━━━━━━━━━━━━━━━━ 1s 11ms/step - loss: 0.1367 - val_loss: 0.1177 - learning_rate: 0.0037
+Epoch 5/100
+95/99 ━━━━━━━━━━━━━━━━━━━━ 0s 9ms/step - loss: 0.1357
+Epoch 5: val_loss did not improve from 0.11412
+99/99 ━━━━━━━━━━━━━━━━━━━━ 1s 11ms/step - loss: 0.1357 - val_loss: 0.1181 - learning_rate: 0.0037
+Epoch 6/100
+96/99 ━━━━━━━━━━━━━━━━━━━━ 0s 9ms/step - loss: 0.1350
+Epoch 6: val_loss did not improve from 0.11412
+99/99 ━━━━━━━━━━━━━━━━━━━━ 1s 11ms/step - loss: 0.1350 - val_loss: 0.1156 - learning_rate: 0.0037
+Epoch 7/100
+94/99 ━━━━━━━━━━━━━━━━━━━━ 0s 9ms/step - loss: 0.1331
+Epoch 7: val_loss did not improve from 0.11412
+99/99 ━━━━━━━━━━━━━━━━━━━━ 1s 11ms/step - loss: 0.1332 - val_loss: 0.1177 - learning_rate: 0.0037
+Epoch 8/100
+94/99 ━━━━━━━━━━━━━━━━━━━━ 0s 9ms/step - loss: 0.1328
+Epoch 8: val_loss did not improve from 0.11412
+99/99 ━━━━━━━━━━━━━━━━━━━━ 1s 11ms/step - loss: 0.1328 - val_loss: 0.1208 - learning_rate: 0.0037
+Epoch 9/100
+97/99 ━━━━━━━━━━━━━━━━━━━━ 0s 8ms/step - loss: 0.1335
+Epoch 9: val_loss improved from 0.11412 to 0.11053, saving model to C:/Users/masoud/ray_results_sqp_mgru/sqp_gru_tuning_campaign_v1/trial_cfbe9914\final_model_checkpoint\checkpoint.weights.h5
+99/99 ━━━━━━━━━━━━━━━━━━━━ 1s 11ms/step - loss: 0.1336 - val_loss: 0.1105 - learning_rate: 0.0037
+Epoch 10/100
+93/99 ━━━━━━━━━━━━━━━━━━━━ 0s 8ms/step - loss: 0.1312
+Epoch 10: val_loss did not improve from 0.11053
+99/99 ━━━━━━━━━━━━━━━━━━━━ 1s 10ms/step - loss: 0.1312 - val_loss: 0.1173 - learning_rate: 0.0037
+Epoch 11/100
+92/99 ━━━━━━━━━━━━━━━━━━━━ 0s 8ms/step - loss: 0.1349
+Epoch 11: val_loss did not improve from 0.11053
+99/99 ━━━━━━━━━━━━━━━━━━━━ 1s 10ms/step - loss: 0.1347 - val_loss: 0.1167 - learning_rate: 0.0037
+Epoch 12/100
+92/99 ━━━━━━━━━━━━━━━━━━━━ 0s 8ms/step - loss: 0.1320
+Epoch 12: val_loss did not improve from 0.11053
+99/99 ━━━━━━━━━━━━━━━━━━━━ 1s 11ms/step - loss: 0.1319 - val_loss: 0.1181 - learning_rate: 0.0037
+Epoch 13/100
+98/99 ━━━━━━━━━━━━━━━━━━━━ 0s 8ms/step - loss: 0.1299
+Epoch 13: val_loss did not improve from 0.11053
+99/99 ━━━━━━━━━━━━━━━━━━━━ 1s 10ms/step - loss: 0.1299 - val_loss: 0.1122 - learning_rate: 0.0037
+Epoch 14/100
+96/99 ━━━━━━━━━━━━━━━━━━━━ 0s 8ms/step - loss: 0.1285
+Epoch 14: val_loss did not improve from 0.11053
+99/99 ━━━━━━━━━━━━━━━━━━━━ 1s 11ms/step - loss: 0.1286 - val_loss: 0.1122 - learning_rate: 0.0037
+Epoch 15/100
+95/99 ━━━━━━━━━━━━━━━━━━━━ 0s 9ms/step - loss: 0.1274
+Epoch 15: val_loss did not improve from 0.11053
+99/99 ━━━━━━━━━━━━━━━━━━━━ 1s 12ms/step - loss: 0.1274 - val_loss: 0.1149 - learning_rate: 0.0037
+Epoch 16/100
+93/99 ━━━━━━━━━━━━━━━━━━━━ 0s 9ms/step - loss: 0.1304
+Epoch 16: val_loss did not improve from 0.11053
+99/99 ━━━━━━━━━━━━━━━━━━━━ 1s 11ms/step - loss: 0.1303 - val_loss: 0.1155 - learning_rate: 0.0037
+Epoch 17/100
+92/99 ━━━━━━━━━━━━━━━━━━━━ 0s 9ms/step - loss: 0.1268
+Epoch 17: val_loss did not improve from 0.11053
+99/99 ━━━━━━━━━━━━━━━━━━━━ 1s 11ms/step - loss: 0.1268 - val_loss: 0.1173 - learning_rate: 0.0037
+Epoch 18/100
+95/99 ━━━━━━━━━━━━━━━━━━━━ 0s 8ms/step - loss: 0.1305
+Epoch 18: val_loss did not improve from 0.11053
+99/99 ━━━━━━━━━━━━━━━━━━━━ 1s 13ms/step - loss: 0.1305 - val_loss: 0.1198 - learning_rate: 0.0037
+Epoch 19/100
+98/99 ━━━━━━━━━━━━━━━━━━━━ 0s 9ms/step - loss: 0.1289
+Epoch 19: ReduceLROnPlateau reducing learning rate to 0.0007423930801451206.
+
+Epoch 19: val_loss did not improve from 0.11053
+99/99 ━━━━━━━━━━━━━━━━━━━━ 1s 12ms/step - loss: 0.1289 - val_loss: 0.1170 - learning_rate: 0.0037
+Epoch 19: early stopping
+Restoring model weights from the end of the best epoch: 9.
+2025-05-15 03:34:20,093 - INFO - Model.fit completed.
+2025-05-15 03:34:20,093 - INFO - Model training completed successfully.
+2025-05-15 03:34:20,109 - INFO - Final model training finished. Train Loss: 0.1276, Val Loss: 0.1170
+2025-05-15 03:34:20,109 - INFO - Training final calibrator with 200000 samples...
+2025-05-15 03:34:20,109 - INFO - Final results and plots will be saved in: C:\Users\masoud\results\P\sqp_mgru_final\run_sqp_gru_tuning_campaign_v1_cfbe9914_20250515_033420
+2025-05-15 03:34:20,109 - INFO - Training calibrator using 200000 samples for PIT estimation...
+2025-05-15 03:34:35,825 - INFO - Calculated 671 raw PIT values.
+2025-05-15 03:34:35,825 - INFO - Plotting raw PIT vs ranks to C:\Users\masoud\results\P\sqp_mgru_final\run_sqp_gru_tuning_campaign_v1_cfbe9914_20250515_033420
+2025-05-15 03:34:36,471 - INFO - Raw PIT vs ranks plot saved.
+2025-05-15 03:34:36,471 - INFO - ir_pit_to_rank trained.
+2025-05-15 03:34:36,471 - INFO - ir_rank_to_pit trained.
+2025-05-15 03:34:36,471 - INFO - Calibrator training finished.
+2025-05-15 03:34:36,533 - INFO - Calibrator training finished.
+2025-05-15 03:34:36,546 - INFO - Loading scaler from: C:\Users\masoud\robust_scaler.pkl
+2025-05-15 03:34:36,546 - INFO - Scaler loaded successfully.
+2025-05-15 03:34:36,549 - INFO - Evaluating final model on validation set using 19312 samples...
+2025-05-15 03:37:28,136 - INFO - Final validation set performance (calibrated):
+2025-05-15 03:37:28,136 - INFO - Validation rmse: 0.3604
+2025-05-15 03:37:28,136 - INFO - Validation r2: 0.8524
+2025-05-15 03:37:28,136 - INFO - Validation nrmse: 0.0673
+2025-05-15 03:37:28,136 - INFO - Validation smape: 59.6169
+2025-05-15 03:37:28,136 - INFO - Validation mae: 0.2819
+2025-05-15 03:37:28,136 - INFO - Validation mase: 1.6751
+2025-05-15 03:37:28,136 - INFO - Validation crps: 0.2529
+2025-05-15 03:37:28,136 - INFO - Validation kl_divergence: 0.0033
+2025-05-15 03:37:28,151 - INFO - Validation ql50: 0.1505
+2025-05-15 03:37:28,151 - INFO - Validation ql90: 0.1324
+2025-05-15 03:37:28,151 - INFO - Validation qlm: 0.1260
+2025-05-15 03:37:28,151 - INFO - Validation msis: 0.4847
+2025-05-15 03:37:28,151 - INFO - Validation wasserstein: 0.1351
+2025-05-15 03:37:28,151 - INFO - Validation pit_mean: 0.6040
+2025-05-15 03:37:28,151 - INFO - Validation pit_std: 0.4488
+2025-05-15 03:37:28,151 - INFO - Validation rmse_original: 0.0910
+2025-05-15 03:37:28,151 - INFO - Validation r2_original: 0.8524
+2025-05-15 03:37:28,151 - INFO - Validation crps_original: 0.0638
+2025-05-15 03:37:32,886 - INFO - All plots saved to: C:\Users\masoud\results\P\sqp_mgru_final\run_sqp_gru_tuning_campaign_v1_cfbe9914_20250515_033420
+2025-05-15 03:37:32,901 - INFO - Evaluating final model on test set using 19312 samples...
+2025-05-15 03:39:59,239 - INFO - Final test set performance (calibrated):
+2025-05-15 03:39:59,239 - INFO - Test rmse: 0.3682
+2025-05-15 03:39:59,239 - INFO - Test r2: 0.6341
+2025-05-15 03:39:59,239 - INFO - Test nrmse: 0.0991
+2025-05-15 03:39:59,255 - INFO - Test smape: 72.5999
+2025-05-15 03:39:59,255 - INFO - Test mae: 0.3000
+2025-05-15 03:39:59,255 - INFO - Test mase: 1.7827
+2025-05-15 03:39:59,255 - INFO - Test crps: 0.2737
+2025-05-15 03:39:59,255 - INFO - Test kl_divergence: 0.0116
+2025-05-15 03:39:59,255 - INFO - Test ql50: 0.1644
+2025-05-15 03:39:59,255 - INFO - Test ql90: 0.1775
+2025-05-15 03:39:59,255 - INFO - Test qlm: 0.1370
+2025-05-15 03:39:59,255 - INFO - Test msis: 0.4181
+2025-05-15 03:39:59,271 - INFO - Test wasserstein: 0.1831
+2025-05-15 03:39:59,271 - INFO - Test pit_mean: 0.6678
+2025-05-15 03:39:59,271 - INFO - Test pit_std: 0.4308
+2025-05-15 03:39:59,271 - INFO - Test rmse_original: 0.0929
+2025-05-15 03:39:59,271 - INFO - Test r2_original: 0.6341
+2025-05-15 03:39:59,271 - INFO - Test crps_original: 0.0691
+2025-05-15 03:40:03,253 - INFO - All plots saved to: C:\Users\masoud\results\P\sqp_mgru_final\run_sqp_gru_tuning_campaign_v1_cfbe9914_20250515_033420
+2025-05-15 03:40:04,366 - INFO - Final model saved at C:\Users\masoud\results\P\sqp_mgru_final\run_sqp_gru_tuning_campaign_v1_cfbe9914_20250515_033420\sqp_mgru_model_final.keras
+2025-05-15 03:40:06,102 - INFO - Ray shut down.
