@@ -1,0 +1,54 @@
+2025-05-08 19:15:26,262 - INFO - Deleting previous output files...
+2025-05-08 19:15:26,262 - INFO - Deleted file: feature_selection_results\correlation_heatmap_spearman_train_v8_separate_train_test.png
+2025-05-08 19:15:26,268 - INFO - Deleted file: feature_selection_results\spearman_selected_features_train_v8_separate_train_test.pkl
+2025-05-08 19:15:26,270 - INFO - Starting feature selection script - version v8_separate_train_test
+2025-05-08 19:15:26,271 - INFO - Step 1: Loading Data...
+2025-05-08 19:15:41,395 - INFO - Training features loaded: (3152, 400)
+2025-05-08 19:15:41,395 - INFO - Training target loaded: (3152,)
+2025-05-08 19:15:50,072 - INFO - Testing features loaded: (1352, 400)
+2025-05-08 19:15:50,072 - INFO - Testing target loaded: (1352,)
+2025-05-08 19:15:50,132 - INFO - Dropped 2 constant/near-constant features from training data.
+2025-05-08 19:15:50,136 - INFO - Dropped constant/near-constant features from testing data based on training data analysis.
+2025-05-08 19:15:50,428 - INFO - Aligned columns between training and testing sets. Final training features shape: (3152, 398), testing features shape: (1352, 398)
+2025-05-08 19:15:50,452 - INFO - Step 2: Initial Filtering with Spearman (Training Data)...
+Spearman Correlation: 100%|█████████████████████████████████████████████████████████| 398/398 [00:00<00:00, 434.57it/s]
+2025-05-08 19:15:51,372 - INFO - Number of features selected by Spearman: 159
+2025-05-08 19:15:51,372 - INFO - Spearman selected features (training) saved.
+2025-05-08 19:15:51,383 - INFO - Number of features after Spearman: 159
+2025-05-08 19:15:53,766 - INFO - Correlation heatmap saved to feature_selection_results\correlation_heatmap_spearman_train_v8_separate_train_test.png
+2025-05-08 19:15:53,772 - INFO - Step 3: Bayesian Optimization (Training Data)...
+BayesSearchCV: 100%|███████████████████████████████████████████████████████████████████| 30/30 [22:00<00:00, 88.28s/it]2025-05-08 19:38:28,634 - INFO - Bayesian optimization parameters (training) saved.
+BayesSearchCV: 100%|███████████████████████████████████████████████████████████████████| 30/30 [22:34<00:00, 45.16s/it]
+2025-05-08 19:38:28,637 - INFO - Final parameters: {'colsample_bytree': 0.6, 'learning_rate': 0.03011967443276373, 'max_depth': 10, 'n_estimators': 500, 'subsample': 0.6}
+2025-05-08 19:38:28,638 - INFO - Step 4: Secondary Filtering (Training Data)...
+2025-05-08 19:38:28,639 - INFO - Starting secondary filtering with XGBoost and correlation management...
+2025-05-08 19:38:58,914 - INFO - Number of features before correlation filter: 154
+2025-05-08 19:38:59,267 - INFO - Features dropped due to high correlation: 40
+2025-05-08 19:38:59,267 - INFO - Number of final features: 114
+2025-05-08 19:38:59,283 - INFO - Filtered features (training) saved.
+2025-05-08 19:38:59,283 - INFO - Number of final features: 114
+2025-05-08 19:38:59,298 - INFO - Final training data saved to feature_selection_results\data_storage_train_v8_separate_train_test.pkl.
+2025-05-08 19:38:59,298 - INFO - Step 5: Model Training and Evaluation...
+2025-05-08 19:40:04,594 - INFO - CV RMSE: 0.256768 (±0.026362)
+2025-05-08 19:41:12,693 - INFO - CV MAE: 0.149897 (±0.010804)
+2025-05-08 19:42:13,671 - INFO - CV R2: 0.902478 (±0.019233)
+2025-05-08 19:42:13,673 - INFO - CV results (training) saved to feature_selection_results\cv_results_train_v8_separate_train_test.csv.
+2025-05-08 19:42:34,820 - INFO - Final model trained on training data.
+2025-05-08 19:42:34,907 - INFO - Final model (trained on training data) saved to feature_selection_results\final_model_train_v8_separate_train_test.pkl.
+2025-05-08 19:42:34,907 - INFO - Test Results: RMSE=0.442122, MAE=0.328194, MAPE=1358.21%, MdAPE=47.93%, R2=0.690775
+2025-05-08 19:42:34,907 - INFO - Test evaluation metrics saved to feature_selection_results\test_evaluation_v8_separate_train_test.txt
+2025-05-08 19:42:35,303 - INFO - Actual vs Predicted plot (test set) saved.
+2025-05-08 19:42:35,303 - INFO - Step 6: SHAP Analysis (Training Data and Model)...
+C:\Users\masoud\AppData\Local\Temp\ipykernel_12952\130599642.py:536: FutureWarning: The NumPy global RNG was seeded by calling `np.random.seed`. In a future version this function will no longer use the global RNG. Pass `rng` explicitly to opt-in to the new behaviour and silence this warning.
+  shap.summary_plot(shap_values, X_train_final.sample(CONFIG['shap_sample_size'], random_state=42), show=False)
+2025-05-08 19:42:39,682 - INFO - SHAP analysis completed on training data and model.
+2025-05-08 19:42:39,682 - INFO - Step 7: Leakage Analysis (Training Data)...
+2025-05-08 19:42:39,682 - INFO - Starting leakage analysis...
+2025-05-08 19:42:39,869 - INFO - Leakage report saved to feature_selection_results\leakage_analysis_train_v8_separate_train_test.csv
+2025-05-08 19:42:39,869 - INFO - No signs of leakage found.
+2025-05-08 19:42:39,869 - INFO - Step 8: Final Saving...
+2025-05-08 19:42:40,453 - INFO - Final selected features and data for training saved to important_features_train_v8_separate_train_test.csv.
+2025-05-08 19:42:42,984 - INFO - Correlation heatmap saved to feature_selection_results\correlation_heatmap_final_train_v8_separate_train_test.png
+2025-05-08 19:42:43,241 - INFO - Final selected features and data for testing saved to important_features_test_v8_separate_train_test.csv.
+2025-05-08 19:42:44,055 - INFO - Final training data with selected features saved to feature_selection_results\important_features_train_v8_separate_train_test.csv.
+
